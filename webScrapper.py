@@ -46,9 +46,9 @@ def eventsToTimeSerie(df: pd.DataFrame, remove_zero_day_lenght_events=False, on_
         last_row = row
 
     timeSerie = pd.DataFrame(timeSerie, columns=['date', 'days_to_happen', 'title', 'votes', 'confidence'], )
-    timeSerie = timeSerie.astype(dtype={'date': 'datetime64[ns]', 
-                            'days_to_happen': 'Int64',
-                            'votes': 'Int64'})
+    timeSerie = timeSerie.astype(dtype={'date': 'datetime64[ns]',
+                                        'days_to_happen': 'Int64',
+                                        'votes': 'Int64'})
     # timeSerie['date'] = timeSerie['date'].astype('datetime64[ns]')
     return timeSerie.set_index('date')
 

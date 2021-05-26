@@ -29,7 +29,8 @@ class EventCardElement(WebElement):
     
     @property
     def confidence_percentage(self) -> float:
-        percentage_text = self.find_element_by_class_name('progress__percent').text
+        # percentage_text = self.find_element_by_class_name('progress__percent').text
+        percentage_text = self.find_element_by_class_name('progress-bar').get_attribute('aria-valuenow')
         return float(percentage_text)/100.0 if percentage_text else float('nan')
     
     @property
