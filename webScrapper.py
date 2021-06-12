@@ -55,7 +55,7 @@ def eventsToTimeSerie(df: pd.DataFrame, remove_zero_day_lenght_events=False, on_
 
 class CoinmarketcalWebScrapper(object):
 
-    def __init__(self, webdriver_path='G:\\Storage\\Repos\\TCC\\data\\loaders\\coinmarketcalWebScrapper\\chromedriver.exe'):
+    def __init__(self, webdriver_path='G:\\Storage\\Repos\\TCC\\src\\data\\loaders\\coinmarketcalWebScrapper\\chromedriver.exe'):
         self.driver = webdriver.Chrome(executable_path=webdriver_path)
         self.wait = WebDriverWait(self.driver, 3)
 
